@@ -10,7 +10,7 @@ namespace BiscuitBattle.Store
         public override IBiscuitCard GetCard()
         {
             var ran = new Random();
-            var choose = ran.Next(0, 6);
+            var choose = ran.Next(0, 7);
             switch (choose)
             {
                 case 0:
@@ -25,6 +25,8 @@ namespace BiscuitBattle.Store
                     return new GingernutBiscuit();
                 case 5:
                     return new CustardCreamBiscuit();
+                case 6:
+                    return new RandomBiscuit();
                 default:
                     return new BalancedBiscuit();
             }
