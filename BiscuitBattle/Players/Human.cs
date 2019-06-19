@@ -21,8 +21,7 @@ namespace BiscuitBattle.Players
 
             var choice = Console.ReadKey().KeyChar.ToString();
 
-
-            if (int.TryParse(choice, out int i))
+            if (int.TryParse(choice, out int i) && (i >= 1 && i <= 5))
             {
                 return (m.Stats.ToList()[i - 1].Key, m.Stats.ToList()[i - 1].Value);
             }
