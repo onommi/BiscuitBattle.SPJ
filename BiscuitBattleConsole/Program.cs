@@ -40,7 +40,9 @@ namespace BiscuitBattleConsole
 
             controller.PlayerOne = new Human();
             controller.PlayerTwo = new BasicAI();
-
+            //controller.PlayerTwo = new CrazyAI();
+            //controller.PlayerTwo = new InsaneAI();
+            
             //3. Start the game
             controller.Begin();
         }
