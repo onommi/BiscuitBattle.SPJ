@@ -6,26 +6,26 @@ using BiscuitBattle.Store.Decks;
 
 namespace BiscuitBattle.Store
 {
-    public class BalancedBiscuit : IBiscuitCard
+    public class CustardCreamBiscuit : IBiscuitCard
     {
         public string Name { get; set; }
         public Dictionary<BiscuitAttribute, int> Stats { get; set; }
         public int Quality => Stats.Sum(att => att.Value);
         public string Description { get; set; }
 
-        public BalancedBiscuit()
+        public CustardCreamBiscuit()
         {
             Stats = new Dictionary<BiscuitAttribute, int>
             {
-                { BiscuitAttribute.DunkIntegrity, 20 },
-                { BiscuitAttribute.Moistness, 20 },
-                { BiscuitAttribute.Snap, 30 },
-                { BiscuitAttribute.Sweetness, 30 },
-                { BiscuitAttribute.Texture, 30 }
+                { BiscuitAttribute.DunkIntegrity, 40 },
+                { BiscuitAttribute.Moistness, 50 },
+                { BiscuitAttribute.Snap, 50 },
+                { BiscuitAttribute.Sweetness, 80 },
+                { BiscuitAttribute.Texture, 50 }
             };
 
-            Name = "Balanced Biscuit";
-            Description = "This biscuit is balanced precariously on the rim of a coffee mug.";
+            Name = "Custard Cream";
+            Description = "The classic custard cream, is there any need to say more?";
         }
     }
 }
